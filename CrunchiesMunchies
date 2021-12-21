@@ -1,0 +1,30 @@
+import codecademylib
+import numpy as np
+calorie_stats = np.genfromtxt("cereal.csv", delimiter=",")
+average_calories = np.mean(calorie_stats)
+print average_calories
+calorie_stats_sorted = np.sort(calorie_stats)
+print calorie_stats_sorted
+median_calories = np.median(calorie_stats_sorted)
+print median_calories
+first_percentile = np.percentile(calorie_stats_sorted, 25)
+third_percentile = np.percentile(calorie_stats_sorted, 75)
+print first_percentile
+print third_percentile
+tenth_percentile = np.percentile(calorie_stats_sorted, 10)
+print tenth_percentile
+fifth_percentile = np.percentile(calorie_stats_sorted, 5)
+print fifth_percentile
+fourth_percentile = np.percentile(calorie_stats_sorted, 4)
+print fourth_percentile
+third_percentile = np.percentile(calorie_stats_sorted, 3)
+print third_percentile
+nth_percentile = fourth_percentile
+more_calories = np.mean(calorie_stats_sorted > 60)
+print more_calories
+calorie_std = np.std(calorie_stats_sorted)
+print calorie_std
+
+# over 96% of cereals compared to CrunchieMunchies has higher calorie content than CM. In fact, the average calorie content in competing cereals is 110 calories per serving, almost double the content of CM
+
+
